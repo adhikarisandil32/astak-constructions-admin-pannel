@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.class-for-li-a {
+    @apply px-4 py-2 block hover:bg-slate-600 hover:text-gray-300 font-semibold;
+}
+
+.h-maxof-300px-100vh {
+    height: max(100vh, 300px);
+}
+  
+/* For any animation to take place only upto the width of 768px */
+@media screen and (max-width: 767px){
+    .side-popup-show{
+        animation: side-popup-show 0.25s linear;
+        animation-fill-mode: forwards;
+    }
+    .side-popup-hide{
+        animation: side-popup-hide 0.25s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes side-popup-show{
+        0%{
+            left: -160px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+    @keyframes side-popup-hide{
+        0%{
+            left: 0;
+        }
+        100%{
+            left: -160px;
+        }
+    }
+}
+
+.text-red-fifty{
+    @apply text-red-50
+}
