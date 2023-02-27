@@ -38,7 +38,3 @@
         }
     }
 }
-
-.text-red-fifty{
-    @apply text-red-50
-}
