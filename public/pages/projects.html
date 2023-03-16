@@ -20,7 +20,7 @@
             </div> <!-- Bars -->
             <div class="flex">
                 <div
-                    class="h-maxof-300px-100vh w-40 md:block bg-slate-500 fixed md:relative top-0 left-0 z-10 hidden"
+                    class="h-[max(100vh,300px)] w-40 md:block bg-slate-500 fixed md:relative top-0 left-0 z-10 hidden"
                     id="overall-sidenav"
                 >
                     <div class="absolute w-full">
@@ -41,32 +41,49 @@
                         </div> <!-- Logo -->
                         <ul>
                             <li>
-                                <a href="./index.html" class="class-for-li-a" onclick="route(event, 'index')"> Home </a>
+                                <a href="" class="class-for-li-a" onclick="route(event, 'index')"> Home </a>
                             </li>
                             <li>
-                                <a href="./pages/projects.html" class="class-for-li-a" onclick="route(event, 'projects')"> Projects </a>
+                                <a href="" class="class-for-li-a" onclick="route(event, 'projects')"> Projects </a>
                             </li>
                             <li>
-                                <a href="./pages/services.html" class="class-for-li-a" onclick="route(event, 'services')"> Services </a>
+                                <a href="" class="class-for-li-a" onclick="route(event, 'services')"> Services </a>
                             </li>
                             <li>
-                                <a href="./pages/about.html" class="class-for-li-a" onclick="route(event, 'about')"> About </a>
+                                <a href="" class="class-for-li-a" onclick="route(event, 'about')"> About </a>
                             </li>
                             <li>
-                                <a href="./pages/index.html" class="class-for-li-a" onclick="route(event, 'index')"> Logout </a>
+                                <a href="" class="class-for-li-a" onclick="route(event, 'index')"> Logout </a>
                             </li>
                         </ul> <!-- Navigation Items -->
                     </div>
                 </div><!-- Overall Navigation Bar -->
         
-                <div class="md:w-[calc(100%-10rem)]" id="page-contents">
-                    <h3>This is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects pageThis is projects page</h3>
-                    <!-- Every contents go in here -->
-                </div>
+                <div class="w-full md:w-[calc(100%-10rem)] px-4" id="page-contents">
+                    <div class="mt-4"> <!-- Upload Images -->
+                        <label class="w-[min(100%,20rem)] block text-center font-semibold cursor-pointer border-2 border-dashed border-sky-700 text-sky-700 mx-auto" for="imageFiles">
+                            <span class="text-6xl"><i class="fa-solid fa-cloud-arrow-up"></i></span><br>
+                            <span>Upload Your Photos</span><br>
+                            <input type="file" accept="image/*" multiple id="imageFiles" hidden>
+                        </label>
+                    </div>
+                    <div class="mt-4"> <!-- Image Preview Section -->
+                        <div class="relative border border-black w-[150px] h-[150px] cursor-context-menu top-right-corner-cross">
+                            <img
+                                src="https://pyxis.nymag.com/v1/imgs/719/440/8968b9e033e5f05b24c26983f1e48ce292-1-Jordan-Peterson.rsquare.w700.jpg"
+                                alt="JP"
+                                class="w-full h-full object-cover object-center"
+                            >
+                        </div>
+                    </div>
+                </div> <!-- Every contents go in here -->
             </div>
       </div>
     </div>
 
-    <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript" src="../script.js"></script> <!-- link to external script for routing -->
+    <script type="text/javascript">
+
+    </script> <!-- Internal Script -->
   </body>
 </html>
