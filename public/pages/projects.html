@@ -4,86 +4,200 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../../src/assets/logo.png">
-    <link rel="stylesheet" type="text/css" href="../output.css">
+    <link rel="icon" type="image/x-icon" href="../../src/assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="../output.css" />
     <title>Astak Constructions | Projects</title>
-    <script src="https://kit.fontawesome.com/802aab03d5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/802aab03d5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div>
       <div class="relative">
-            <div class="p-2 sticky top-0 md:hidden bg-slate-400 text-gray-800 w-full z-10">
+        <div
+          class="p-2 sticky top-0 md:hidden bg-slate-400 text-gray-800 w-full z-10"
+        >
+          <i
+            class="fa-solid fa-bars p-2 rounded border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 cursor-pointer"
+            onclick="onClickBars()"
+          ></i>
+        </div>
+        <!-- Bars -->
+        <div class="flex">
+          <div
+            class="h-[max(100vh,300px)] w-40 md:block bg-slate-500 fixed md:relative top-0 left-0 z-10 hidden"
+            id="overall-sidenav"
+          >
+            <div class="absolute w-full">
+              <div class="mt-2 md:hidden">
                 <i
-                    class="fa-solid fa-bars p-2 rounded border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 cursor-pointer"
-                    onclick="onClickBars()"
+                  class="fa-solid fa-x py-2 px-2.5 rounded border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 cursor-pointer relative left-[73%]"
+                  onclick="onClickX()"
                 ></i>
-            </div> <!-- Bars -->
-            <div class="flex">
-                <div
-                    class="h-[max(100vh,300px)] w-40 md:block bg-slate-500 fixed md:relative top-0 left-0 z-10 hidden"
-                    id="overall-sidenav"
-                >
-                    <div class="absolute w-full">
-                        <div class="mt-2 md:hidden">
-                            <i
-                                class="fa-solid fa-x py-2 px-2.5 rounded border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 cursor-pointer relative left-[73%]"
-                                onclick="onClickX()"
-                            ></i>
-                        </div> <!-- Xmark -->
-                        <div class="flex justify-start">
-                            <div class="pl-4 md:pt-4">
-                                <img
-                                    src="../../src/assets/logo.png"
-                                    alt="logo"
-                                    class="w-[75px] cursor-pointer"
-                                />
-                            </div>
-                        </div> <!-- Logo -->
-                        <ul>
-                            <li>
-                                <a href="" class="class-for-li-a" onclick="route(event, 'index')"> Home </a>
-                            </li>
-                            <li>
-                                <a href="" class="class-for-li-a" onclick="route(event, 'projects')"> Projects </a>
-                            </li>
-                            <li>
-                                <a href="" class="class-for-li-a" onclick="route(event, 'services')"> Services </a>
-                            </li>
-                            <li>
-                                <a href="" class="class-for-li-a" onclick="route(event, 'about')"> About </a>
-                            </li>
-                            <li>
-                                <a href="" class="class-for-li-a" onclick="route(event, 'index')"> Logout </a>
-                            </li>
-                        </ul> <!-- Navigation Items -->
-                    </div>
-                </div><!-- Overall Navigation Bar -->
-        
-                <div class="w-full md:w-[calc(100%-10rem)] px-4" id="page-contents">
-                    <div class="mt-4"> <!-- Upload Images -->
-                        <label class="w-[min(100%,20rem)] block text-center font-semibold cursor-pointer border-2 border-dashed border-sky-700 text-sky-700 mx-auto" for="imageFiles">
-                            <span class="text-6xl"><i class="fa-solid fa-cloud-arrow-up"></i></span><br>
-                            <span>Upload Your Photos</span><br>
-                            <input type="file" accept="image/*" multiple id="imageFiles" hidden>
-                        </label>
-                    </div>
-                    <div class="mt-4"> <!-- Image Preview Section -->
-                        <div class="relative border border-black w-[150px] h-[150px] cursor-context-menu top-right-corner-cross">
-                            <img
-                                src="https://pyxis.nymag.com/v1/imgs/719/440/8968b9e033e5f05b24c26983f1e48ce292-1-Jordan-Peterson.rsquare.w700.jpg"
-                                alt="JP"
-                                class="w-full h-full object-cover object-center"
-                            >
-                        </div>
-                    </div>
-                </div> <!-- Every contents go in here -->
+              </div>
+              <!-- Xmark -->
+              <div class="flex justify-start">
+                <div class="pl-4 md:pt-4">
+                  <img
+                    src="../../src/assets/logo.png"
+                    alt="logo"
+                    class="w-[75px] cursor-pointer"
+                  />
+                </div>
+              </div>
+              <!-- Logo -->
+              <ul>
+                <li>
+                  <a
+                    href=""
+                    class="class-for-li-a"
+                    onclick="route(event, 'index')"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="class-for-li-a"
+                    onclick="route(event, 'projects')"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="class-for-li-a"
+                    onclick="route(event, 'services')"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="class-for-li-a"
+                    onclick="route(event, 'about')"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="class-for-li-a"
+                    onclick="route(event, 'index')"
+                  >
+                    Logout
+                  </a>
+                </li>
+              </ul>
+              <!-- Navigation Items -->
             </div>
+          </div>
+          <!-- Overall Navigation Bar -->
+
+          <div class="w-full md:w-[calc(100%-10rem)] px-4" id="page-contents">
+                <div class="mt-4">
+                    <!-- Upload Images -->
+                    <label
+                        class="w-[min(100%,20rem)] block text-center font-semibold cursor-pointer border-2 border-dashed border-sky-700 text-sky-700 mx-auto"
+                        for="imageFiles"
+                    >
+                        <span class="text-6xl">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </span>
+                        <br />
+                        <span>Upload Your Photos</span> <br />
+                        <input
+                            type="file"
+                            onchange="handleChange()"
+                            accept=".jpg, .png, .jpeg"
+                            id="imageFiles"
+                            multiple
+                            hidden
+                        />
+                    </label>
+                </div>
+                <div class="image-preview-container">
+                <!-- Image Preview Section -->
+                <!-- <div class="individual-image-container">
+                        <span>❌</span>
+                        <img
+                            src="https://pyxis.nymag.com/v1/imgs/719/440/8968b9e033e5f05b24c26983f1e48ce292-1-Jordan-Peterson.rsquare.w700.jpg"
+                            alt="JP"
+                            class="w-full h-full object-cover object-center"
+                        >
+                    </div> -->
+                </div>
+          </div> <!-- Every contents go in here -->
+        </div>
       </div>
     </div>
 
-    <script type="text/javascript" src="../script.js"></script> <!-- link to external script for routing -->
+    <script type="text/javascript" src="../script.js"></script>
+    <!-- link to external script for routing -->
     <script type="text/javascript">
+        const fileLists = document.querySelector("#imageFiles")
+        const fr = new FileReader()
+        const imagePreviewContainer = document.querySelector(".image-preview-container")
 
+        //function that runs on change of input element
+        function handleChange(){
+            if(fileLists.files.length > 10){
+                alert("Select no more than 10 files")
+                location.reload()
+                return
+            }
+            const objectImageURL = convertToObjectURL(fileLists.files)
+
+            pushImageToDOM(objectImageURL)
+        }
+
+        //function to convert any files to Object URL
+        function convertToObjectURL(files){
+            const objectImageURL = []
+
+            for(let i = 0; i < files.length; i++){  
+                objectImageURL.push(URL.createObjectURL(files[i]))
+            }
+
+            return objectImageURL
+        }
+
+        //function to push image to DOM using objectImageURL values as src
+        function pushImageToDOM(objectImageURL){
+            imagePreviewContainer.innerHTML = ''
+            for(let i = 0; i < objectImageURL.length; i++){
+                //create span tag first
+                const spanElem = document.createElement("span")
+                spanElem.innerText = "❌"
+                spanElem.addEventListener("click", (e) => {
+                    removeItsParentFromDOM(e.target)
+                })
+
+                //create img tag second
+                const imgElem = document.createElement("img");
+                imgElem.setAttribute("src", `${objectImageURL[i]}`)
+                imgElem.setAttribute("class", "w-full h-full object-cover object-center")
+
+                //then create container for the img tag, a div tag
+                const imageContainer = document.createElement("div")
+                imageContainer.setAttribute("class", "individual-image-container")
+
+                //append image to imageContainer
+                imageContainer.append(spanElem, imgElem)
+
+                //and then append imageContainer to imagePreviewContainer
+                imagePreviewContainer.appendChild(imageContainer)
+            }
+        }
+
+        function removeItsParentFromDOM(targetElem){
+            targetElem.parentNode.remove()
+        }
     </script> <!-- Internal Script -->
   </body>
 </html>
